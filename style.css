@@ -66,9 +66,13 @@ li:hover::after {
     width: 100px;
 }
 
+.burger-wrapper {
+    align-items: center;
+    display: none;
+}
+
 .burger {
     position: abolute;
-    display: none;
     cursor: pointer;
 }
 
@@ -118,24 +122,30 @@ li:hover::after {
 /* responsive 768px */
 
 @media (max-width: 768px) {
-    .burger {
-        display:block;
+    .burger-wrapper {
+        display:flex;
+        justify-content: space-evenly;
+        width: 100%;
     }
-
     .navbar {
         display: none;
         transition: 0.5s;
     }
-    
     .ul-list {
         flex-direction: column;
     }
-
-    .logo {
+    .Logo {
         display: block;
     }
     .navbar.activeNavigation{
         display: block;
+    }
+    .Logo-main{
+        display: none;
+    }
+
+    .navbar-wraper{
+        flex-direction: column-reverse;
     }
 }
 
